@@ -1,0 +1,138 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300italic,300);
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import "./abelfubu-everforest";
+
+@font-face {
+  font-family: Iosevka;
+  src: url(./fonts/iosevka.ttc);
+}
+
+:root {
+  --max-width: 46rem;
+}
+
+html {
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: beige;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  max-width: 100%;
+  background-color: #282c34;
+  max-width: var(--max-width);
+  margin: auto;
+
+  &:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url(https://i.ibb.co/cv7Jrz4/sunset.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #282c34;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    opacity: 20%;
+    z-index: -1;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Merriweather, Georgia, serif;
+  font-weight: inherit;
+  padding: 3rem 0 1rem;
+}
+
+h1 {
+  font-size: 3.998rem;
+}
+
+h2 {
+  font-size: 2.827rem;
+}
+
+h3 {
+  font-size: 1.999rem;
+}
+
+h4 {
+  font-size: 1.414rem;
+}
+
+h5 {
+  font-size: 1.121rem;
+}
+
+h6 {
+  font-size: 0.88rem;
+}
+
+pre {
+  margin: 1rem 0 0.5rem;
+  padding: 1.5rem;
+  border-radius: 0.3em;
+  opacity: 0.8;
+}
+
+hr {
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+img {
+  width: 100%;
+}
+
+blockquote p {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 1rem auto;
+  max-width: 48rem;
+}
+
+li {
+  margin-left: 2rem;
+}
+
+p {
+  max-width: var(--max-width);
+  margin: 1rem auto 1.5rem;
+  height: auto;
+  line-height: 1.45;
+}
+
+a,
+a:visited {
+  color: #3498db;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #2980b9;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+.copy-to-clipboard-button {
+  position: absolute;
+  right: 0;
+}
