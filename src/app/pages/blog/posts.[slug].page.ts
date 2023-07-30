@@ -1,4 +1,3 @@
-// /src/app/pages/blog/posts.[slug].page.ts
 import { injectContent, MarkdownComponent } from '@analogjs/content';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { Component } from '@angular/core';

@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 @import "./abelfubu-everforest";
 
-@font-face {
-  font-family: Iosevka;
-  src: url(./fonts/iosevka.ttc);
-}
+// @font-face {
+//   font-family: Iosevka;
+//   src: url(./fonts/iosevka.ttc);
+// }
 
 :root {
   --max-width: 46rem;
@@ -31,7 +31,7 @@ body {
   max-width: 100%;
   max-width: var(--max-width);
   margin: auto;
-  background-color: #282c34;
+  background-color: #1e222a;
 
   &:before {
     content: "";
