@@ -14,4 +14,9 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
+
+  it('should be able to debut my test', () => {
+    const result = 10 + 20;
+    expect(result).toBe(30);
+  });
 });

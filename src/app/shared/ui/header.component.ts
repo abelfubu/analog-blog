@@ -1,17 +1,19 @@
+import { NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'afb-header',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, NgForOf],
   template: `
     <header>
       <img src="/img/abelfubu.png" alt="Abelfubu logo" />
       <nav>
         <ul>
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="/blog">Blog</a></li>
+          <ng-container *ngFor="let link of links">
+            <li [routerLink]="link.url">{{ link.text }}</li>
+          </ng-container>
         </ul>
       </nav>
     </header>
@@ -42,4 +44,9 @@ import { RouterLink } from '@angular/router';
     `,
   ],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  protected readonly links = [
+    { text: 'Home', url: '/' },
+    { text: 'Blog', url: '/blog' },
+  ];
+}
