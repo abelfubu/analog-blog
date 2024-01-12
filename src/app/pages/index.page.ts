@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
+  selector: 'afb-home',
   standalone: true,
   template: ` <h1>Hello analog!</h1> `,
 })
