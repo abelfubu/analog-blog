@@ -1,6 +1,11 @@
 ---
 title: Lo que estoy aprendiendo ahora de angular
+coverImage: abelfubu.png
 slug: 1
+date: 11 Enero, 2024
+tags: 
+  - angular
+  - typescript
 meta:
   - name: description
     content: About Page Description
@@ -17,6 +22,19 @@ meta:
 interface HelloWorld {
   name: string;
   isFemale: boolean;
+}
+```
+
+```ts
+export class User {
+  constructor(
+    private readonly age: number,
+    private readonly name: string, 
+  ) {}
+
+  sayHi(): void {
+    console.log(`Hi! I am ${this.name}!`);
+  }
 }
 ```
 

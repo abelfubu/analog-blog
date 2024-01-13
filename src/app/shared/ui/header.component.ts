@@ -1,52 +1,37 @@
 import { NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'afb-header',
   standalone: true,
-  imports: [RouterLink, NgForOf],
+  imports: [RouterLink, NgForOf, RouterLinkActive],
   template: `
-    <header>
-      <img src="/img/abelfubu.png" alt="Abelfubu logo" />
+    <header class="flex justify-content-between align-items-center py-2">
+      <img src="/img/abelfubu.png" alt="Abelfubu logo" class="w-2" />
       <nav>
-        <ul>
-          <ng-container *ngFor="let link of links">
-            <li [routerLink]="link.url">{{ link.text }}</li>
-          </ng-container>
+        <ul class="flex list-none">
+          @for (link of links; track link.id) {
+            <li>
+              <a
+                style="color: inherit"
+                class="no-underline weight font-bold"
+                [routerLink]="link.url"
+                routerLinkActive="text-blue-400"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                {{ link.text }}
+              </a>
+            </li>
+          }
         </ul>
       </nav>
     </header>
   `,
-  styles: [
-    `
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-
-        & img {
-          width: 100px;
-        }
-
-        & ul {
-          list-style: none;
-          display: flex;
-        }
-
-        & a {
-          /* text-decoration: none; */
-          color: inherit;
-          cursor: pointer;
-        }
-      }
-    `,
-  ],
 })
 export class HeaderComponent {
   protected readonly links = [
-    { text: 'Home', url: '/' },
-    { text: 'Blog', url: '/blog' },
+    { id: 1, text: 'Home', url: '/' },
+    { id: 2, text: 'Blog', url: '/blog' },
   ];
 }

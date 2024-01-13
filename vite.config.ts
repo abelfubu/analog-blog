@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 
-import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
+import { defineConfig } from 'vite';
 import tsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(({ mode }) => ({
@@ -12,7 +12,18 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog(), tsConfigPaths()],
+  plugins: [
+    analog({
+      static: true,
+      prerender: {
+        routes: async () => ['/', '/blog', '/blog/posts/1', '/blog/posts/2'],
+        sitemap: {
+          host: 'https://abelfubu.dev/',
+        },
+      },
+    }),
+    tsConfigPaths(),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',

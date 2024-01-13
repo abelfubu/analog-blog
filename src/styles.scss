@@ -1,11 +1,14 @@
+@import "primeflex/primeflex.css";
+@import "primeflex/themes/primeone-dark.css";
 @import url(http://fonts.googleapis.com/css?family=Merriweather:300italic,300);
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 @import "./abelfubu-everforest";
 
-// @font-face {
-//   font-family: Iosevka;
-//   src: url(./fonts/iosevka.ttc);
-// }
+
+@font-face {
+  font-family: Neon;
+  src: url(/fonts/neon.otf);
+}
 
 :root {
   --max-width: 46rem;
@@ -44,7 +47,7 @@ body {
     background-color: #282c34;
     background-blend-mode: multiply;
     background-attachment: fixed;
-    opacity: 20%;
+    opacity: 90%;
     z-index: -1;
   }
 }
@@ -114,6 +117,7 @@ p {
   margin: 1rem auto 1.5rem;
   height: auto;
   line-height: 1.45;
+  font-weight: 300;
 }
 
 a,
