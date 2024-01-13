@@ -1,0 +1,1 @@
+import{ɵ as a,a as m,b as s,c as l,d as r}from"./index-e11b8e6e.js";let d=(()=>{var e;class n{}return e=n,e.ɵfac=function(t){return new(t||e)},e.ɵcmp=a({type:e,selectors:[["afb-home"]],standalone:!0,features:[m],decls:2,vars:0,template:function(t,p){t&1&&(s(0,"h1"),l(1,"Hello analog!"),r())},encapsulation:2}),n})();export{d as default};
