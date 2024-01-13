@@ -22,7 +22,7 @@ export interface PostAttributes {
       @for (post of posts; track post.filename) {
         <li>
           <img
-            [src]="'/img/' + post.attributes.coverImage"
+            src="./img/{{ post.attributes.coverImage }}"
             [alt]="post.attributes.title"
           />
           <a [routerLink]="['/blog', 'posts', post.slug]">{{
