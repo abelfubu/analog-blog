@@ -8,7 +8,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [RouterLink, NgForOf, RouterLinkActive],
   template: `
     <header class="flex justify-content-between align-items-center py-2">
-      <img src="/img/abelfubu.png" alt="Abelfubu logo" class="w-2" />
+      <img [src]="'/img/abelfubu.png'" alt="Abelfubu logo" class="w-2" />
       <nav>
         <ul class="flex list-none">
           @for (link of links; track link.id) {

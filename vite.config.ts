@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
       prerender: {
         routes: async () => ['/', '/blog', '/blog/posts/1', '/blog/posts/2'],
         sitemap: {
-          host: 'https://abelfubu.dev/',
+          host: 'https://abelfubu.github.io/analog-blog/',
         },
       },
     }),
@@ -33,5 +33,5 @@ export default defineConfig(({ mode }) => ({
   define: {
     'import.meta.vitest': mode !== 'production',
   },
-  base: mode === 'development' ? '/' : '/analog-blog/',
+  base: '/analog-blog/',
 }));
