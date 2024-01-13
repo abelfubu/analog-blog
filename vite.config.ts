@@ -33,4 +33,5 @@ export default defineConfig(({ mode }) => ({
   define: {
     'import.meta.vitest': mode !== 'production',
   },
+  base: mode === 'development' ? '/' : '/analog-blog/',
 }));
